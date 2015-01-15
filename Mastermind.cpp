@@ -1,6 +1,5 @@
 int Mastermind{
-	//added line here for test.
-    //testing changes
+	//serious comments only.
 
 	return 0;
 }
