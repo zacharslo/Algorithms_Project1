@@ -1,5 +1,6 @@
 int Mastermind{
-	//serious comments only.
+	
+	
 
 	return 0;
 }
@@ -21,7 +22,10 @@ public:
 	float getGuesses() const return guesses;
 
 private:
-	float digit[4]:
+	float digit_1;
+	float digit_2;
+	float digit_3;
+	float digit_4;
 	float range;
 	float guesses;
 }
