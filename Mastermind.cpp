@@ -1,25 +1,27 @@
-int Mastermind{
-	
-	
+#include <iostream>
 
+using namespace std;
+
+int main(){
+	cout << "test";
 	return 0;
 }
 
-class setup_4 {
+class setup {
 public:
-	setup_4();
-	void setNumRange(const float newRange) range = newRange;
-	void setGuesses(const float newGuesses) guesses = newGuesses;
-	void set_1(const float newDigit) digit_1 = newDigit;
-	void set_2(const float newDigit) digit_2 = newDigit;
-	void set_3(const float newDigit) digit_3 = newDigit;
-	void set_4(const float newDigit) digit_4 = newDigit;
-	float get_1() const return digit_1;
-	float get_2() const return digit_2;
-	float get_3() const return digit_3;
-	float get_4() const return digit_4;
-	float getRange() const return range;
-	float getGuesses() const return guesses;
+	setup();
+	void setNumRange(const float newRange){range = newRange;}
+	void setGuesses(const float newGuesses){guesses = newGuesses;}
+	void set_1(const float newDigit){digit_1 = newDigit;}
+	void set_2(const float newDigit){digit_2 = newDigit;}
+	void set_3(const float newDigit){digit_3 = newDigit;}
+	void set_4(const float newDigit){digit_4 = newDigit;}
+	float get_1() const{return digit_1;}
+	float get_2() const{return digit_2;}
+	float get_3() const{return digit_3;}
+	float get_4() const{return digit_4;}
+	float getRange() const{return range;}
+	float getGuesses() const{return guesses;}
 
 private:
 	float digit_1;
@@ -28,8 +30,8 @@ private:
 	float digit_4;
 	float range;
 	float guesses;
-}
-
+};
+/*
 class custom_setup_digit {
 public:
 	custom_setup_digit();
@@ -38,7 +40,7 @@ public:
 
 private:
 	float digit;
-}
+};
 
 class custom_setup_range {
 public:
@@ -48,7 +50,7 @@ public:
 
 private:
 	float range;
-}
+};
 
 class custom_setup_guesses {
 public:
@@ -58,7 +60,7 @@ public:
 
 private:
 	float guesses;
-}
+};
 
 class guess {
 public:
@@ -76,7 +78,7 @@ private:
 	float guess_2;
 	float guess_3;
 	float guess_4;
-}
+};
 
 class custom_guess {
 public:
@@ -86,4 +88,4 @@ public:
 
 private:
 	float guess;
-}
+}; */
