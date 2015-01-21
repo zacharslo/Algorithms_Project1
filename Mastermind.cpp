@@ -178,15 +178,15 @@ int main(){
 	}
 	
 	if(first.get_2() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
 	}
 	
 	if(first.get_2() == game.get_3()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
 	}
 	
 	if(first.get_2() == game.get_4()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
 	}
 	
 	//Check third digit
@@ -195,15 +195,15 @@ int main(){
 	}
 	
 	if(first.get_3() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
 	}
 	
 	if(first.get_3() == game.get_2()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
 	}
 	
 	if(first.get_3() == game.get_4()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
 	}
 	
 	//Check fourth digit
@@ -212,15 +212,15 @@ int main(){
 	}
 	
 	if(first.get_4() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
 	}
 	
 	if(first.get_4() == game.get_2()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
 	}
 	
 	if(first.get_4() == game.get_3()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
+		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
 	}
 	
 	//Second guess
