@@ -102,8 +102,9 @@ int main(){
 	int i = 0;
 	string player;
 	string playagain;
-	setup game;								// ---------------------------------------------------------------------------------- FIX THIS LINE ---------------------------------------------------------------------------------
+	setup game;
 	srand((unsigned)time(0));
+	guess pguess;
 	guess first;
 	guess second;
 	guess third;
@@ -114,7 +115,7 @@ int main(){
 	guess eighth;
 	guess ninth;
 	guess tenth;
-	int guess;
+	int digit;
 	
 	//Asking for player setup input
 	cout << "What is your name?\n";
@@ -135,94 +136,194 @@ int main(){
 	//Testing output
 	cout << game.get_1() << "\n" << game.get_2() << "\n" << game.get_3() << "\n" << game.get_4() << "\n\n";
 	
-	//First guess
-	cout << "What is your first guess?\n(Number 1 through" << range << ".\n";
-	
-	cout << "First number:";
-	cin >> guess;
-	first.set_1(guess);
-	
-	cout << "Second number:";
-	cin >> guess;
-	first.set_2(guess);
-	
-	cout << "Third number:";
-	cin >> guess;
-	first.set_3(guess);
-	
-	cout << "Fourth number:";
-	cin >> guess;
-	first.set_4(guess);
-	
-	//Check guess against random
-	//Check first digit
-	if(first.get_1() == game.get_1()){
-		cout << "Congradualations, your first digit (" << first.get_1() << ") is correct!"
+	//Guesses with saving function
+	cout << "What is your first guess?\n(Number 1 through " << range << ").\n";
+	for(int i = 0; i < guesses; i++){
+		//Read in digits to guess	
+		cout << "First digit:";
+		cin >> digit;
+		pguess.set_1(digit);
+		
+		cout << "Second digit:";
+		cin >> digit;
+		pguess.set_2(digit);
+		
+		cout << "Third digit:";
+		cin >> digit;
+		pguess.set_3(digit);
+		
+		cout << "Fourth digit:";
+		cin >> digit;
+		pguess.set_4(digit);
+		
+		//Check guess against random
+		//Check first digit
+		if(pguess.get_1() == game.get_1()){
+			cout << "Congradulations, your first digit (" << pguess.get_1() << ") is correct!\n";
+		}
+		
+		if(pguess.get_1() == game.get_2() && pguess.get_1() != game.get_1()){
+			cout << "There is a " << pguess.get_1() << " in there somewhere, but it isn't the first digit....\n";
+		}
+		
+		if(pguess.get_1() == game.get_3() && pguess.get_1() != game.get_1()){
+			cout << "There is a " << pguess.get_1() << " in there somewhere, but it isn't the first digit....\n";
+		}
+		
+		if(pguess.get_1() == game.get_4() && pguess.get_1() != game.get_1()){
+			cout << "There is a " << pguess.get_1() << " in there somewhere, but it isn't the first digit....\n";
+		}
+		
+		//Check second digit
+		if(pguess.get_2() == game.get_2()){
+			cout << "Congradulations, your second digit (" << pguess.get_2() << ") is correct!\n";
+		}
+		
+		if(pguess.get_2() == game.get_1() && pguess.get_2() != game.get_2()){
+			cout << "There is a " << pguess.get_2() << " in there somewhere, but it isn't the second digit....\n";
+		}
+		
+		if(pguess.get_2() == game.get_3() && pguess.get_2() != game.get_2()){
+			cout << "There is a " << pguess.get_2() << " in there somewhere, but it isn't the second digit....\n";
+		}
+		
+		if(pguess.get_2() == game.get_4() && pguess.get_2() != game.get_2()){
+			cout << "There is a " << pguess.get_2() << " in there somewhere, but it isn't the second digit....\n";
+		}
+		
+		//Check third digit
+		if(pguess.get_3() == game.get_3()){
+			cout << "Congradulations, your third digit (" << pguess.get_3() << ") is correct!\n";
+		}
+		
+		if(pguess.get_3() == game.get_1() && pguess.get_3() != game.get_3()){
+			cout << "There is a " << pguess.get_3() << " in there somewhere, but it isn't the third digit....\n";
+		}
+		
+		if(pguess.get_3() == game.get_2() && pguess.get_3() != game.get_3()){
+			cout << "There is a " << pguess.get_3() << " in there somewhere, but it isn't the third digit....\n";
+		}
+		
+		if(pguess.get_3() == game.get_4() && pguess.get_3() != game.get_3()){
+			cout << "There is a " << pguess.get_3() << " in there somewhere, but it isn't the third digit....\n";
+		}
+		
+		//Check fourth digit
+		if(pguess.get_4() == game.get_4()){
+			cout << "Congradulations, your fourth digit (" << pguess.get_4() << ") is correct!\n";
+		}
+		
+		if(pguess.get_4() == game.get_1() && pguess.get_4() != game.get_4()){
+			cout << "There is a " << pguess.get_4() << " in there somewhere, but it isn't the fourth digit....\n";
+		}
+		
+		if(pguess.get_4() == game.get_2() && pguess.get_4() != game.get_4()){
+			cout << "There is a " << pguess.get_4() << " in there somewhere, but it isn't the fourth digit....\n";
+		}
+		
+		if(pguess.get_4() == game.get_3() && pguess.get_4() != game.get_4()){
+			cout << "There is a " << pguess.get_4() << " in there somewhere, but it isn't the fourth digit....\n";
+		}
+		
+		if(i == 0){
+			first.set_1(pguess.get_1());
+			first.set_2(pguess.get_2());
+			first.set_3(pguess.get_3());
+			first.set_4(pguess.get_4());
+		}
+		if(i == 1){
+			second.set_1(pguess.get_1());
+			second.set_2(pguess.get_2());
+			second.set_3(pguess.get_3());
+			second.set_4(pguess.get_4());
+		}
+		if(i == 2){
+			third.set_1(pguess.get_1());
+			third.set_2(pguess.get_2());
+			third.set_3(pguess.get_3());
+			third.set_4(pguess.get_4());
+		}
+		if(i == 3){
+			fourth.set_1(pguess.get_1());
+			fourth.set_2(pguess.get_2());
+			fourth.set_3(pguess.get_3());
+			fourth.set_4(pguess.get_4());
+		}
+		if(i == 4){
+			fifth.set_1(pguess.get_1());
+			fifth.set_2(pguess.get_2());
+			fifth.set_3(pguess.get_3());
+			fifth.set_4(pguess.get_4());
+		}
+		if(i == 5){
+			sixth.set_1(pguess.get_1());
+			sixth.set_2(pguess.get_2());
+			sixth.set_3(pguess.get_3());
+			sixth.set_4(pguess.get_4());
+		}
+		if(i == 6){
+			seventh.set_1(pguess.get_1());
+			seventh.set_2(pguess.get_2());
+			seventh.set_3(pguess.get_3());
+			seventh.set_4(pguess.get_4());
+		}
+		if(i == 7){
+			eighth.set_1(pguess.get_1());
+			eighth.set_2(pguess.get_2());
+			eighth.set_3(pguess.get_3());
+			eighth.set_4(pguess.get_4());
+		}
+		if(i == 8){
+			ninth.set_1(pguess.get_1());
+			ninth.set_2(pguess.get_2());
+			ninth.set_3(pguess.get_3());
+			ninth.set_4(pguess.get_4());
+		}
+		if(i == 9){
+			tenth.set_1(pguess.get_1());
+			tenth.set_2(pguess.get_2());
+			tenth.set_3(pguess.get_3());
+			tenth.set_4(pguess.get_4());
+		}
+		
+		if (i >= 0){
+			cout << "Your first guess: [" << first.get_1() << "] [" << first.get_2() << "] [" << first.get_3() << "] [" << first.get_4() << "].\n";
+		}
+		if (i > 0){
+			cout << "Your second guess: [" << second.get_1() << "] [" << second.get_2() << "] [" << second.get_3() << "] [" << second.get_4() << "].\n";
+		}
+		if (i > 1){
+			cout << "Your third guess: [" << third.get_1() << "] [" << third.get_2() << "] [" << third.get_3() << "] [" << third.get_4() << "].\n";
+		}
+		if (i > 2){
+			cout << "Your fourth guess: [" << fourth.get_1() << "] [" << fourth.get_2() << "] [" << fourth.get_3() << "] [" << fourth.get_4() << "].\n";
+		}
+		if (i > 3){
+			cout << "Your fifth guess: [" << fifth.get_1() << "] [" << fifth.get_2() << "] [" << fifth.get_3() << "] [" << fifth.get_4() << "].\n";
+		}
+		if (i > 4){
+			cout << "Your sixth guess: [" << sixth.get_1() << "] [" << sixth.get_2() << "] [" << sixth.get_3() << "] [" << sixth.get_4() << "].\n";
+		}
+		if (i > 5){
+			cout << "Your seventh guess: [" << seventh.get_1() << "] [" << seventh.get_2() << "] [" << seventh.get_3() << "] [" << seventh.get_4() << "].\n";
+		}
+		if (i > 6){
+			cout << "Your eighth guess: [" << eighth.get_1() << "] [" << eighth.get_2() << "] [" << eighth.get_3() << "] [" << eighth.get_4() << "].\n";
+		}
+		if (i > 7){
+			cout << "Your ninth guess: [" << ninth.get_1() << "] [" << ninth.get_2() << "] [" << ninth.get_3() << "] [" << ninth.get_4() << "].\n";
+		}
+		if (i > 8){
+			cout << "Your tenth guess: [" << tenth.get_1() << "] [" << tenth.get_2() << "] [" << tenth.get_3() << "] [" << tenth.get_4() << "].\n";
+		}
+		
+		if(pguess.get_1() == game.get_1() && pguess.get_2() == game.get_2() && pguess.get_3() == game.get_3() && pguess.get_4() == game.get_4()){
+			cout << "Congratulations! You have guessed all digits correctly! You have won the game!\n";
+			break;
+		}
 	}
 	
-	if(first.get_1() == game.get_2()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
-	}
-	
-	if(first.get_1() == game.get_3()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
-	}
-	
-	if(first.get_1() == game.get_4()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the first digit...."
-	}
-	
-	//Check second digit
-	if(first.get_2() == game.get_2()){
-		cout << "Congradualations, your second digit (" << first.get_2() << ") is correct!"
-	}
-	
-	if(first.get_2() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
-	}
-	
-	if(first.get_2() == game.get_3()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
-	}
-	
-	if(first.get_2() == game.get_4()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the second digit...."
-	}
-	
-	//Check third digit
-	if(first.get_3() == game.get_3()){
-		cout << "Congradualations, your third digit (" << first.get_3() << ") is correct!"
-	}
-	
-	if(first.get_3() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
-	}
-	
-	if(first.get_3() == game.get_2()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
-	}
-	
-	if(first.get_3() == game.get_4()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the third digit...."
-	}
-	
-	//Check fourth digit
-	if(first.get_4() == game.get_4()){
-		cout << "Congradualations, your fourth digit (" << first.get_4() << ") is correct!"
-	}
-	
-	if(first.get_4() == game.get_1()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
-	}
-	
-	if(first.get_4() == game.get_2()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
-	}
-	
-	if(first.get_4() == game.get_3()){
-		cout << "There is a " << first.get_1() << "in there somewhere, but it isn't the fourth digit...."
-	}
-	
+	/*
 	//Second guess
 	cout << "What is your second guess?\n";
 	
@@ -393,9 +494,9 @@ int main(){
 	cout << "Fourth number:";
 	cin >> guess;
 	tenth.set_4(guess);
-	
+	*/
 	//Play again function
-	cout << "Would you like to play again? (y/n)\n";
+	cout << "Thank you for playing, " << player << ".\nWould you like to play again? (y/n)\n";
 	cin >> playagain;
 	
 	//Prints an error if playagain is an invalid value.
@@ -407,7 +508,7 @@ int main(){
 	
 	
 	//exit program
-	cout << "Thank you for playing!\n";
+	cout << "Thank you for playing MASTERMIND!\nBy Andrew and Zach";
 	
 	clock_t start_time, current_time;
 	
