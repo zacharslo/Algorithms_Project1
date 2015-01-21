@@ -104,6 +104,17 @@ int main(){
 	string playagain;
 	setup game;								// ---------------------------------------------------------------------------------- FIX THIS LINE ---------------------------------------------------------------------------------
 	srand((unsigned)time(0));
+	guess first;
+	guess second;
+	guess third;
+	guess fourth;
+	guess fifth;
+	guess sixth;
+	guess seventh;
+	guess eighth;
+	guess ninth;
+	guess tenth;
+	int guess;
 	
 	//Asking for player setup input
 	cout << "What is your name?\n";
@@ -117,10 +128,206 @@ int main(){
 	game.setNumRange(range);
 	game.setGuesses(guesses);
 	game.set_1((rand() % range) + 1);
-	game.set_1((rand() % range) + 1);
-	game.set_1((rand() % range) + 1);
-	game.set_1((rand() % range) + 1);
+	game.set_2((rand() % range) + 1);
+	game.set_3((rand() % range) + 1);
+	game.set_4((rand() % range) + 1);
 	
+	//Testing output
+	cout << game.get_1() << "\n" << game.get_2() << "\n" << game.get_3() << "\n" << game.get_4() << "\n\n";
+	
+	//First guess
+	cout << "What is your first guess?\n(Number 1 through" << range << ".\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	first.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	first.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	first.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	first.set_4(guess);
+	
+	//Check guess against random
+	
+	//Second guess
+	cout << "What is your second guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	second.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	second.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	second.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	second.set_4(guess);
+	
+	//Third guess
+	cout << "What is your third guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	third.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	third.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	third.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	third.set_4(guess);
+	
+	//Fourth guess
+	cout << "What is your fourth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	fourth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	fourth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	fourth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	fourth.set_4(guess);
+	
+	//Fifth guess
+	cout << "What is your fourth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	fifth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	fifth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	fifth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	fifth.set_4(guess);
+	
+	//Sixth guess
+	cout << "What is your sixth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	sixth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	sixth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	sixth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	sixth.set_4(guess);
+	
+	//Seventh guess
+	cout << "What is your seventh guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	seventh.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	seventh.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	seventh.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	seventh.set_4(guess);
+	
+	//Eighth guess
+	cout << "What is your eighth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	eighth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	eighth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	eighth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	eighth.set_4(guess);
+	
+	//Ninth guess
+	cout << "What is your ninth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	ninth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	fourth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	ninth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	ninth.set_4(guess);
+	
+	//Tenth guess
+	cout << "What is your tenth guess?\n";
+	
+	cout << "First number:";
+	cin >> guess;
+	tenth.set_1(guess);
+	
+	cout << "Second number:";
+	cin >> guess;
+	tenth.set_2(guess);
+	
+	cout << "Third number:";
+	cin >> guess;
+	tenth.set_3(guess);
+	
+	cout << "Fourth number:";
+	cin >> guess;
+	tenth.set_4(guess);
+	
+	//Play again function
 	cout << "Would you like to play again? (y/n)\n";
 	cin >> playagain;
 	
