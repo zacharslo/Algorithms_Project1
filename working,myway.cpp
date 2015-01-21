@@ -29,7 +29,39 @@ private:
 	int guesses;
 };
 
-class response {
+/*   ------- The code below is used for custom games. Currently they are unused and therefore commented out. -------
+class custom_setup_digit {
+public:
+	custom_setup_digit();
+	void set(const int newDigit){digit = newDigit;}
+	int get() const{return digit;}
+
+private:
+	int digit;
+};
+
+class custom_setup_range {
+public:
+	custom_setup_range();
+	void set(const int newRange){range = newRange;}
+	int get() const{return range;}
+
+private:
+	int range;
+};
+
+class custom_setup_guesses {
+public:
+	custom_setup_guesses();
+	void set(const int newGuesses){guesses = newGuesses;}
+	int get() const{return guesses;}
+
+private:
+	int guesses;
+};
+*/
+
+class guess {
 public:
 	void set_1(const int newGuess){guess_1 = newGuess;}
 	void set_2(const int newGuess){guess_2 = newGuess;}
@@ -39,8 +71,6 @@ public:
 	int get_2() const{return guess_2;}
 	int get_3() const{return guess_3;}
 	int get_4() const{return guess_4;}
-	bool win() const;
-	void compare();
 
 private:
 	int guess_1;
@@ -49,30 +79,17 @@ private:
 	int guess_4;
 };
 
-class code {
-	public:
-		bool check_correct ()
-		bool check_incorrect ()
-		void set_1(const int newDigit){digit_1 = newDigit;}
-		void set_2(const int newDigit){digit_2 = newDigit;}
-		void set_3(const int newDigit){digit_3 = newDigit;}
-		void set_4(const int newDigit){digit_4 = newDigit;}
-		int get_1() const{return digit_1;}
-		int get_2() const{return digit_2;}
-		int get_3() const{return digit_3;}
-		int get_4() const{return digit_4;}
-	
-	private:
-		int digit_1;
-		int digit_2;
-		int digit_3;
-		int digit_4;
-};
+/*   ------- The code below is used for custom games. Currently they are unused and therefore commented out. -------
+class custom_guess {
+public:
+	custom_guess();
+	void set(const int newGuess){guess = newGuess;}
+	int get() const{return guess;}
 
-class mastermind {
-	public:
-		
+private:
+	int guess;
 };
+*/
 
 int main(){
 	//Welcome Splash Screen
