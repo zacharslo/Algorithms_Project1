@@ -5,6 +5,7 @@
 using namespace std;
 
 //Masterming game made by Andrew Blum and Zach Sloane
+//Project 1a
 
 class code {
 	public:
