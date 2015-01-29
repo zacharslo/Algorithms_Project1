@@ -1,8 +1,8 @@
-#include "mastermind.h"
+#include "game.h"
 
 int main() {
-    mastermind game;
-    game.playGame2();
+    game mastermind;
+    mastermind.playGame2();
     
     return 0;
 }

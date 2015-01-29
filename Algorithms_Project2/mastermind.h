@@ -11,8 +11,12 @@ using namespace std;
 class mastermind {
 	public:
 		mastermind();
+		void displayGuess();
+		void displaySecretCode();
+		vector<code> getSolutions();
+		vector<code> getGuesses();
+		vector<response> getResponses();
     	code agentGuess();
-		void playGame2();
 		bool consistentWithPreviousGuesses(const code guess);
     
 	private:
@@ -25,25 +29,8 @@ class mastermind {
 		vector<response> responses; //list of all previous responses
 };
 
-//initializes secret code length and range of 10
+//initializes mastermind
 mastermind::mastermind() {
+    secretCode.setCode();
     
-}
-
-//runs mastermind game until allowed tries is reached
-void mastermind::playGame2() {
-	//Welcome Splash Screen
-    cout << "Welcome to MASTERMIND\nDeveloped by Andrew and Zach\n\nWould you like to play a game?\nPress [ENTER] to continue.\n";
-    cin.ignore();
-    
-    //The Rules are explained
-    cout << "In this version of Mastermind, roles have been switched.\nYou will come up with the code and the computer will guess it.\nTo play the game, please think of a 4 digit code with each digit being a number between 1 and 6.\n(example: (4, 1, 4, 6)\n";
-    
-	code secretCode;
-	secretCode.getCode();
-    
-    
-    
-	
-	
 }

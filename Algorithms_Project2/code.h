@@ -27,7 +27,7 @@ istream& operator>> (istream& input, vector<int>& code) {
 class code {
 	public:
 		code();
-		void setCode(const vector<int> code) {secretCode = code;}
+		void setCode() {cin >> secretCode;}
 		vector<int> getCode() const {return secretCode;}
 		void printCode() const {cout << secretCode;}
 		void increment();
