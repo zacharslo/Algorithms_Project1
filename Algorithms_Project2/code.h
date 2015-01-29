@@ -7,9 +7,11 @@ using namespace std;
 
 //overload << operator
 ostream& operator<< (ostream& output, const vector<int>& code) {
-    for (int i = 0; i < code.size(); i++) {
-        output << code[i] << " ";
+    output << "(";
+	for (int i = 0; i < (code.size() - 1); i++) {
+        output << code[i] << ", ";
 	}
+	output << code.back() << ")";
     return output;
 }
 
@@ -25,9 +27,9 @@ istream& operator>> (istream& input, vector<int>& code) {
 class code {
 	public:
 		code();
-		void setCode();
-		void getCode();
-		void printCode();
+		void setCode(const vector<int> code) {secretCode = code;}
+		vector<int> getCode() const {return secretCode;}
+		void printCode() const {cout << secretCode;}
 		void increment();
 		
 		int checkCorrect(const vector<int>& guess);
@@ -40,7 +42,12 @@ class code {
 
 //initiates code
 code::code() {
-	
+	vector<int> a(4);
+	secretCode = a;
+	secretCode[0] = 1;
+	secretCode[1] = 1;
+	secretCode[2] = 1;
+	secretCode[3] = 1;
 }
 
 //increases the code by 1 (from 1 to 6)
