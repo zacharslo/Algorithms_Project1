@@ -18,7 +18,7 @@ ostream& operator<< (ostream& output, const vector<int>& code) {
 //overload >> operator
 istream& operator>> (istream& input, vector<int>& code) {
 	cout << "Enter your secret code.\n";
-    for(int i = 0; i < (code.size() - 1); i++) {
+    for(int i = 0; i < (code.size()); i++) {
     	cout << "Enter digit [" << i+1 << "]: ";
         input >> code[i];
     }
@@ -45,12 +45,12 @@ code::code() {
 	vector<int> a(4);
 	secretCode = a;
 	secretCode[0] = 1;
-	secretCode[1] = 1;
-	secretCode[2] = 1;
-	secretCode[3] = 1;
+	secretCode[1] = 2;
+	secretCode[2] = 3;
+	secretCode[3] = 4;
 }
 
-//increases the code by 1 (from 1 to 6)
+//increases the code by 1 (each digit from 1 to 6)
 void code::increment() {
 	if (secretCode[3] < 6) {
 		secretCode[3]++;

@@ -15,11 +15,9 @@ void game::playGame2() {
     cout << "In this version of Mastermind, roles have been switched.\nYou will come up with the code and the computer will guess it.\nTo play the game, please think of a 4 digit code with each digit being a number between 1 and 6.\n(example: (4, 1, 4, 6)\n";
     
     mastermind game;
-	
-	code guess;
     
     cout << "Is your code " << game.agentGuess() << "?"; 
-    
+    cin >> game.reply;
 	
 	
 }
