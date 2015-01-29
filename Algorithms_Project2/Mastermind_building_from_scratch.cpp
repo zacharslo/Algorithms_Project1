@@ -41,7 +41,8 @@ private:
 class mastermind {
 	public:
 		mastermind();
-		void playgame();
+    	code agentGuess();
+		void playGame2();
 		bool consistentWithPreviousGuesses(const code guess);
 		
 	private:
@@ -56,7 +57,7 @@ class mastermind {
 		vector<response> responses; //list of all previous responses
 };
 
-void mastermind::playgame() {
+void mastermind::playGame2() {
 	//Introduce the game to the player.
 	cout << "Welcome to Mastermind.\nThis game was developed by Andrew Blum and Zach Sloan.\n\nTo play the game, please think of a 4 digit code with each digit being a number between 1 and 6.\n(example: [4] [1] [4] [6])\n";
 	
@@ -84,5 +85,5 @@ bool mastermind::consistentWithPreviousGuesses(const code guess) {
 
 int main(){
 	mastermind game;
-	game.playgame();
+	game.playGame2();
 }

@@ -8,53 +8,42 @@ using namespace std;
 
 //Zach's code
 
-class mastermind
-{
-public:
-    mastermind(int, int);
-    mastermind();
-    void Run();
+class mastermind {
+	public:
+		mastermind();
+    	code agentGuess();
+		void playGame2();
+		bool consistentWithPreviousGuesses(const code guess);
     
-    friend ostream& operator<< (ostream&, const vector<int>&);
-    friend istream& operator>> (istream&, vector<int>&);
-    
-private:
-	vector<response> previousResponses;
-	vector<code> previousGuesses;
-    code game;
-    int trycnt;
+	private:
+		code secretCode; //the player's secret code
+		code guess; //the current guess
+		
+		vector<code> S; //list of possible solutions
+		
+		vector<code> guesses; //list of all previous guesses
+		vector<response> responses; //list of all previous responses
 };
 
 //initializes secret code length and range of 10
-mastermind::mastermind() : game()
-{
-    trycnt = 10;
-}
-
-//overloaded constructor initializes secret code range using user inputted values
-mastermind::mastermind(int n, int m) : game()
-{
-    trycnt = 10;
+mastermind::mastermind() {
+    
 }
 
 //runs mastermind game until allowed tries is reached
-void mastermind::Run()
-{
-    for (int i = 1; i <= trycnt; i++)
-    {
-        //initialize integer vector to hold user's guess
-        vector<int> guess(4);
-        cin >> guess;
-        
-        //checks that there is no error in range or length of user's guess
-        if (game.Error(guess))
-            continue;
-        
-        int correct = game.checkCorrect(guess); //number of correct digits in the correct locations
-
-        int incorrect = game.checkIncorrect(guess); //number of correct digits in incorrect locations
-        
-        cout << "\n\n" << "Correct Guesses:  " << incorrect << endl;
-        cout << "Correct Positions: " << correct    << endl << endl;
-    }
+void mastermind::playGame2() {
+	//Welcome Splash Screen
+    cout << "Welcome to MASTERMIND\nDeveloped by Andrew and Zach\n\nWould you like to play a game?\nPress [ENTER] to continue.\n";
+    cin.ignore();
+    
+    //The Rules are explained
+    cout << "In this version of Mastermind, roles have been switched.\nYou will come up with the code and the computer will guess it.\nTo play the game, please think of a 4 digit code with each digit being a number between 1 and 6.\n(example: (4, 1, 4, 6)\n";
+    
+	code secretCode;
+	secretCode.getCode();
+    
+    
+    
+	
+	
 }
