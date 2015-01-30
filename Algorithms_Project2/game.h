@@ -18,9 +18,10 @@ void game::playGame2() {
     mastermind game;
     
     //Check with user if guess is correct
-    for (int i = 0; i < 10; i++) {
-	    cout << "\nIs your code " << game.agentGuess().getCode() << "?\n"; 
+    for (int i = 0; i < 15; i++) {
+	    cout << "\nIs your code (1, 2, 3, 4)?\n";
+		//cout << "\nIs your code " << game.agentGuess().getCode() << "?\n"; 
 	    game.setResponse();
-	    
+	    game.setResponses();
 	}
 }
