@@ -56,12 +56,12 @@ response::response() {
 void response::setResponse() {
 	char checkCorrect;
 	do {
-		cout << "What is the response to my guess?\n How many digits were correct and in the correct location? ";
+		cout << "What is the response to my guess?\nHow many digits were correct and in the correct location? ";
 		cin >> reply[0];
 		cout << "How many digits were correct but not in the correct location? ";
 		cin >> reply[1];
-		cout << reply << "Is this correct? (y/n)";
+		cout << "Your response was " << reply << " Is this correct? (y/n)";
 		cin >> checkCorrect;
-	} while (checkCorrect != 'y' || checkCorrect != 'Y');
+	} while (checkCorrect != 'y' && checkCorrect != 'Y');
 }
 

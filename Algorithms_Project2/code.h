@@ -28,8 +28,10 @@ class code {
 	public:
 		code();
 		void setCode() {cin >> secretCode;}
+		void setCode(const vector<int> code) {secretCode = code;}
+		void setCode(const code newCode) {secretCode = newCode.getCode();}
 		vector<int> getCode() const {return secretCode;}
-		void printCode() const {cout << secretCode;}
+		void displayCode() const {cout << secretCode;}
 		void increment();
 		
 		int checkCorrect(const vector<int>& guess);
@@ -48,6 +50,7 @@ code::code() {
 	secretCode[1] = 2;
 	secretCode[2] = 3;
 	secretCode[3] = 4;
+//	cout << secretCode;
 }
 
 //increases the code by 1 (each digit from 1 to 6)
@@ -75,7 +78,7 @@ void code::increment() {
 	}
 }
 
-
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Zach's Code:
 
 //checks secret code against guesses for correct digits in the correct position

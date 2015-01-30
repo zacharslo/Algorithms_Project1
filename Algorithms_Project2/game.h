@@ -12,12 +12,15 @@ void game::playGame2() {
     cin.ignore();
     
     //The Rules are explained
-    cout << "In this version of Mastermind, roles have been switched.\nYou will come up with the code and the computer will guess it.\nTo play the game, please think of a 4 digit code with each digit being a number between 1 and 6.\n(example: (4, 1, 4, 6)\n";
+    cout << "In this version of Mastermind, roles have been switched.\nYou will come up with the code and the computer will guess it.\nTo play the game, please think of a 4 digit code.\n Each digit should be a number between 1 and 6.\n(example: (4, 1, 4, 6)\n\n";
     
+    //initiate game objects
     mastermind game;
     
-    cout << "Is your code " << game.agentGuess() << "?"; 
-    cin >> game.reply;
-	
-	
+    //Check with user if guess is correct
+    for (int i = 0; i < 10; i++) {
+	    cout << "\nIs your code " << game.agentGuess().getCode() << "?\n"; 
+	    game.setResponse();
+	    
+	}
 }
