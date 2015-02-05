@@ -7,6 +7,9 @@ Description: Used to read from a text file and store a list of words as a vector
 
 // idk about this #define WORDLIST_CLASS
 
+#ifndef WORDLIST_CLASS
+#define WORDLIST_CLASS
+
 #include <stdlib.h>
 #include <string>
 #include <vector>
@@ -28,3 +31,5 @@ private:
 	void quickSort(int low, int high);
     void swap(int word1, int word2);
 };
+
+#endif

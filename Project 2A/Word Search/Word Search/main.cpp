@@ -5,8 +5,8 @@ Description: Word search
 
  */
 
-#include "grid.h"
-#include "wordList.h"
+#include "grid.cpp"
+#include "wordList.cpp"
 #include <string>
 
 using namespace std;

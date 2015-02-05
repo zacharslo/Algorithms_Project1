@@ -1,3 +1,6 @@
+#ifndef WORDLIST_FUNCTS
+#define WORDLIST_FUNCTS
+
 /*
 wordList.cpp
 Authors: Zach Sloane and Andrew Blum
@@ -43,3 +46,4 @@ void wordList::swap(int word1, int word2)
 	words[word2] = tempword;
 }
 
+#endif
