@@ -1,3 +1,6 @@
+#ifndef GRID_FUNCTS
+#define GRID_FUNCTS
+
 /*
 Grid.cpp
 Author: Zach Sloane and Andrew Blum
@@ -60,3 +63,5 @@ void grid::parseLine(const string& line, int numLine)
     }
      */
 }
+
+#endif

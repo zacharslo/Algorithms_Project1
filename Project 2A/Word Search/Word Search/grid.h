@@ -1,3 +1,6 @@
+#ifndef GRID_CLASS
+#define GRID_CLASS
+
 /*
 Grid.h
 Author: Zach Sloane and Andrew Blum
@@ -29,3 +32,4 @@ class grid
 		void parseLine(const string& line, int lineNum);
 };
 
+#endif
