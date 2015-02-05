@@ -14,7 +14,7 @@ Description: Used to read a matrix of words from file to search through
 #include <fstream>
 #include <iostream>
 
-//#include "d_matrix.h" this is going to be needed
+#include "d_matrix.h"
 #include "wordList.h"
 
 using namespace std;
@@ -28,6 +28,7 @@ class grid
 		
 
 	private:
+        matrix<char> data;
 		void readGrid(const string& name);
 		void parseLine(const string& line, int lineNum);
 };
