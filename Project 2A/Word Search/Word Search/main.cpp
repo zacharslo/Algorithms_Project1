@@ -6,7 +6,9 @@ Description: Word search
  */
 
 #include "grid.cpp"
+//#include "grid.c"
 #include "wordList.cpp"
+//#include "wordList.c"
 #include <string>
 
 using namespace std;
